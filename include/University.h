@@ -9,7 +9,8 @@ private:
 
 public:
   University(int   cap) :
-    capacity(cap) {}
+    capacity(cap),
+    occPlaces(0) {}
 
   University(const string& uniName,
              int   cap) :
