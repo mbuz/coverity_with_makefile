@@ -14,7 +14,7 @@ CPP     = g++
 CFLAGS  = -Wall -g -fPIC
 INCLUDE = -I../include
 LDFLAGS = -lm -lboost_serialization
-SCC_C   = NamedObject Student University storeSomeRecords
+SCC_C   = InputHandler NamedObject Student University storeSomeRecords
 
 tt:
 	@echo "Makefile exec"

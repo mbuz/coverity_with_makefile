@@ -37,7 +37,13 @@ void storeSomeRecords() {
 // *****************************************************************************
 int main() {
   string dataFileName;
-  
+  YesNoHandler newFile;
+  InputHandler dataFile;
+
+  if (newFile.ask("Do you a data file?")) {
+    dataFile.ask("Please enter data file");
+  }
+
   storeSomeRecords(); 
   cout << "-----------------" << endl;
   
