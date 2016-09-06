@@ -6,15 +6,14 @@
 # fields:
 #
 #
-#include <dir>/SCC_Makefile
 #
 # ------------------------------------------------------------------------------
 APPLIC = storeSomeRecords
 CC      = gcc
 CPP     = g++
-CFLAGS  = -Wall -g
+CFLAGS  = -Wall -g -fPIC
 INCLUDE = -I../include
-LDFLAGS = -lm
+LDFLAGS = -lm -lboost_serialization
 SCC_C   = NamedObject Student University storeSomeRecords
 
 tt:
@@ -39,7 +38,7 @@ COBJ  :=$(foreach file, $(CBASE), $(file).o)
 
 $(APPLIC): $(OBJ) $(CPPOBJ) $(COBJ)
 	echo $(CFILES)
-	$(CPP) -g $(LDFLAGS) -o $@ $ $^
+	$(CPP) -g -o $@ $ $^ $(LDFLAGS)
 
 
 all: tt $(CFILES) $(APPLIC)
