@@ -1,6 +1,8 @@
 #include <string>
 #include <iostream>
 #include <list>
+#include <boost/archive/text_oarchive.hpp>
+#include <boost/archive/text_iarchive.hpp>
 using namespace std;
 #include "NamedObject.h"
 #include "Student.h"

@@ -20,7 +20,17 @@ public:
   
   void addStudent(Student& s);
   
+  template <typename Archive>
+  void serialize(Archive &ar,
+                 const unsigned int version) {
+    ar & boost::serialization::base_object<NamedObject>(*this);
+    ar & capacity;
+    ar & occPlaces;
+  }
+  
   virtual void print() const;
+  virtual void store(boost::archive::text_oarchive& oa);
+  virtual void restore(boost::archive::text_iarchive& oa);
 };
 
 
