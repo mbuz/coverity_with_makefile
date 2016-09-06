@@ -36,6 +36,7 @@ void storeSomeRecords() {
 
 // *****************************************************************************
 int main() {
+  string dataFileName;
   
   storeSomeRecords(); 
   cout << "-----------------" << endl;
